@@ -1,0 +1,26 @@
+<head>
+  <title>WebCampBackendNew</title>
+</head>
+
+<body>
+  <% if flash[:notice] %>
+      <div>
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+<section>
+  <h2>Book</h2>
+  <section>
+    <h3>
+      <%= @book.title %>
+    </h3>
+    <div>
+      <p>
+        <%= @book.body %>
+      </p>
+    <%= link_to "edit", edit_book_path(@book) %>
+    <%= link_to "back", books_path  %>
+    </section>
+</section>
+</body>
